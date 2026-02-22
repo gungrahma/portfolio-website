@@ -132,14 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h2>What is Openclaw?</h2>
                     <p>Openclaw is a fully free-to-use (Open Source) framework for building AI Agents in many chat platforms.</p>
                     <p>With Openclaw, you can create AI Agents that can interact with users in various chat platforms, such as Slack, Discord, and Microsoft Teams.</p>
-                    <h2>Real case study</h2>
-                    <p>Let's consider a real-world example where a poorly designed UI led to a frustrating user experience.</p>
-                    <h2>A. Case Study: BROS Mobile Application</h2>
-                    <p>In this case,</p>
-                    <ol>
-                        <li><strong>Problem:</strong> Users couldn't find the main action button.</li>
-                        <li><strong>Solution:</strong> Redesign the layout to make the button more prominent.</li>
-                    </ol>
                 `
             },
 
