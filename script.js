@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Update Copyright Year
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
 
-    // Dynamic Project Loader
     const urlParams = new URLSearchParams(window.location.search);
     const projectId = urlParams.get('id');
 
@@ -18,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 challenge: 'TBA',
                 solution: 'TBA',
                 result: 'TBA',
-                image: '' // Example path
+                image: ''
             },
             'coinfolio': {
                 category: 'UI/UX',
@@ -27,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 challenge: 'Most healthcare apps are cluttered with noisy data. The user wanted a calm way to check their health metrics.',
                 solution: 'We designed a dark-mode interface using React Native, focusing only on the essential metrics: Total Balance and 24h Change. No news feeds, no ads.',
                 result: 'Achieved 10,000 active users in the first month and featured in "Best Design Apps" on the App Store.',
-                image: 'assets/coinfolio-shot.png' // Example path
+                image: 'assets/coinfolio-shot.png' 
             },
             'architecture': {
                 category: 'UI/UX',
@@ -36,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 challenge: 'The firm wanted to showcase their blueprints and finished buildings side-by-side without a complex navigation.',
                 solution: 'Implemented a horizontal scrolling grid layout using CSS Grid and sparse Javascript for smooth interactions.',
                 result: 'The site won an Awwwards Honorable Mention and helped the firm secure 3 major commercial contracts.',
-                image: 'assets/architecture-shot.png' // Example path
+                image: 'assets/architecture-shot.png' 
             },
             'Cosplay': {
                 category: 'Cosplay',
@@ -45,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 challenge: 'The app had a high drop-off rate during the onboarding process.',
                 solution: 'We implemented a more intuitive onboarding flow and personalized user profiles.',
                 result: 'Increased user retention by 30% and received positive feedback from the community.',
-                image: 'assets/cosplay-shot.png' // Example path
+                image: 'assets/cosplay-shot.png'
             }
 
         };
@@ -69,16 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
             document.title = data.title + " - Case Study";
         }
     }
-    // Filter Logic for Projects Page
+
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
 
     if (filterBtns.length > 0 && projectCards.length > 0) {
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Remove active class from all
                 filterBtns.forEach(b => b.classList.remove('active'));
-                // Add active to clicked
                 btn.classList.add('active');
 
                 const filterValue = btn.getAttribute('data-filter');
@@ -98,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Dynamic Blog Post Loader
     const blogId = urlParams.get('id');
     if (blogId && window.location.pathname.includes('blog-post.html')) {
         const posts = {
@@ -241,24 +236,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateThemeIcon(theme) {
-        // Icon SVG for Sun (Light) and Moon (Dark)
         const sunIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
         const moonIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
 
         if (themeToggle) {
             themeToggle.innerHTML = theme === 'dark' ? sunIcon : moonIcon;
         } else {
-            // If button doesn't exist yet (not loaded), wait or ignore.
         }
     }
-    // Set initial icon
     if (!savedTheme) {
-        // Default to light icon (moon) since default is light
         updateThemeIcon('light');
     }
 
-
-    // Mobile Menu Logic
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.querySelector('.nav-links');
 
@@ -268,7 +257,6 @@ document.addEventListener('DOMContentLoaded', () => {
             menuToggle.classList.toggle('active');
         });
 
-        // Close menu when a link is clicked
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');

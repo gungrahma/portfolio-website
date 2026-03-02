@@ -159,7 +159,6 @@ p {
     max-width: 600px;
 }
 
-/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -197,7 +196,6 @@ p {
     font-weight: 500;
 }
 
-/* Hero Section */
 .hero {
     min-height: 90vh;
     display: flex;
@@ -217,7 +215,6 @@ p {
     font-weight: 500;
 }
 
-/* About Section */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -246,7 +243,6 @@ p {
     opacity: 1;
 }
 
-/* Projects Section */
 .project-list {
     display: flex;
     flex-direction: column;
@@ -276,7 +272,6 @@ p {
     margin-bottom: 12px;
 }
 
-/* Contact Section */
 .contact-container {
     text-align: left;
 }
@@ -293,14 +288,12 @@ p {
     opacity: 0.7;
 }
 
-/* Simple Footer */
 footer {
     padding: 40px 0;
     border-top: 1px solid #eee;
     margin-top: 80px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     :root {
         --nav-height: 70px;
@@ -365,7 +358,6 @@ footer {
         font-size: 1.5rem;
     }
 
-    /* Hamburger Animation */
     .menu-toggle.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 6px);
     }
@@ -396,7 +388,6 @@ footer {
     h1 {
         font-size: 2.5rem;
         word-wrap: break-word;
-        /* Prevent long words from overflowing */
     }
 
     h2 {
@@ -435,13 +426,11 @@ footer {
         font-size: 2rem;
     }
 
-    /* Ensure no overflow */
     body {
         overflow-x: hidden;
     }
 }
 
-/* Projects Page Specifics */
 .projects-header {
     text-align: left;
     margin-bottom: 60px;
@@ -491,7 +480,6 @@ footer {
     display: none;
 }
 
-/* Animation for filtering */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -551,7 +539,6 @@ footer {
     color: var(--gray-medium);
 }
 
-/* Blog Page Specifics */
 .blog-list {
     display: flex;
     flex-direction: column;
@@ -603,7 +590,6 @@ footer {
     color: var(--gray-medium);
 }
 
-/* Single Blog Post */
 .blog-post-container {
     padding-top: var(--nav-height);
 }
