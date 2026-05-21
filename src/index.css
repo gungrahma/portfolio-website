@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-dark: #080808;
+  --color-text-dark: #f0f0f0;
+  --color-gray-light-dark: #18181b;
+  --color-gray-medium-dark: #a1a1aa;
+  --color-border-dark: rgba(255, 255, 255, 0.05);
+
+  --color-bg-light: #f4f4f5;
+  --color-text-light: #09090b;
+  --color-gray-light-light: #e4e4e7;
+  --color-gray-medium-light: #71717a;
+  --color-border-light: rgba(0, 0, 0, 0.05);
+
+  --font-main: "Google Sans", sans-serif;
+}
+
+@layer base {
+  :root {
+    --bg-color: var(--color-bg-light);
+    --text-color: var(--color-text-light);
+    --gray-light: var(--color-gray-light-light);
+    --gray-medium: var(--color-gray-medium-light);
+    --border-color: var(--color-border-light);
+    --nav-bg: rgba(244, 244, 245, 0.9);
+  }
+
+  .dark {
+    --bg-color: var(--color-bg-dark);
+    --text-color: var(--color-text-dark);
+    --gray-light: var(--color-gray-light-dark);
+    --gray-medium: var(--color-gray-medium-dark);
+    --border-color: var(--color-border-dark);
+    --nav-bg: rgba(8, 8, 8, 0.9);
+  }
+
+  body {
+    @apply bg-[var(--bg-color)] text-[var(--text-color)] font-main antialiased transition-colors duration-300;
+  }
+
+  h1, h2, h3 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 1px rgba(0,0,0,0.8);
+  }
+  .dark .text-stroke {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.8);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gray-medium);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-color);
+}
