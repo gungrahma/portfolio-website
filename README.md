@@ -1,20 +1,43 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Portfolio Website
 
-# Run and deploy your AI Studio app
+My personal portfolio website showcasing projects and blog posts. Rebuilt with NextJS, featuring smooth page transitions powered by Barba.js and buttery scrolling with Lenis.
 
-This contains everything you need to run your app locally.
+## Tech Stack
 
-View your app in AI Studio: https://ai.studio/apps/f8818c43-dba6-4472-ac7a-dfa6ac9cd80e
+- **Framework**: NextJS
+- **Animations**: Barba.js (page transitions)
+- **Scroll**: Lenis (smooth scrolling)
+- **Styling**: CSS Modules
+- **Language**: TypeScript
 
-## Run Locally
+## Getting Started
 
-**Prerequisites:**  Node.js
+```bash
+npm install
+npm run dev
+```
 
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Project Structure
+
+```
+src/
+├── components/      # Reusable UI components
+├── pages/          # Page components (Home, Projects, Blog)
+├── context/        # React context (Theme)
+├── lib/            # Utility functions
+└── App.tsx          # Main app with Barba.js integration
+```
+
+## Features
+
+- Smooth page transitions with Barba.js
+- Lenis smooth scrolling
+- Dark/Light theme toggle
+- Custom cursor animation
+- Responsive design
+
+## License
+
+MIT
