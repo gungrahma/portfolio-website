@@ -28,7 +28,7 @@ export function Navbar() {
           <Link to="/" className="w-8 h-8 bg-[var(--text-color)] flex items-center justify-center rounded-sm hover:-translate-y-0.5 transition-transform">
             <span className="text-[var(--bg-color)] font-black text-xs italic">AR</span>
           </Link>
-          <span className="text-[11px] uppercase tracking-[0.3em] font-medium opacity-60 hidden sm:block">Agung Rahma &mdash; Digital Portfolio</span>
+          <span className="text-[11px] uppercase tracking-[0.3em] font-medium opacity-60 hidden sm:block">Agung Rahma</span>
         </div>
 
         {/* Desktop Nav */}
