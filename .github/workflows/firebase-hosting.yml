@@ -25,4 +25,4 @@ jobs:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
         run: |
           echo $FIREBASE_SERVICE_ACCOUNT | base64 -d > service-account.json
-          npx firebase-tools deploy --token-file service-account.json --only hosting
+          GOOGLE_APPLICATION_CREDENTIALS=service-account.json npx firebase-tools deploy --only hosting
