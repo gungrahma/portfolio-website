@@ -5,7 +5,7 @@ import { AnimatedText, FadeIn } from "../components/AnimatedText";
 const posts = [
   {
     id: 1,
-    title: "10 Tips for Better UX Design in 2026",
+    title: "Tips for Better UX Design in 2026",
     date: "April 15, 2026",
     excerpt: "Discover the latest trends and practical strategies to elevate user experience in modern web applications.",
   },
