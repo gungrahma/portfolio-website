@@ -17,6 +17,11 @@ const posts = {
     title: "The Future of Frontend Development",
     date: "February 10, 2026",
     content: "Exploring upcoming technologies, AI tools, and architectural shifts that will define the next era of UI engineering.",
+  },
+  "4": {
+    title: "Integrate Openclaw to discord bot",
+    date: "December 01, 2025",
+    content: "Explore about what is openclaw and how being integrated in Discord bots as a personal assistance"
   }
 };
 
