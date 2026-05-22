@@ -20,6 +20,12 @@ const posts = [
     title: "The Future of Frontend Development",
     date: "February 10, 2026",
     excerpt: "Exploring upcoming technologies, AI tools, and architectural shifts that will define the next era of UI engineering.",
+  },
+  {
+    id: 4,
+    title: "Integrate Openclaw to discord bot",
+    date: "December 01, 2025",
+    excerpt: "Explore about what is openclaw and how being integrated in Discord bots as a personal assistance"
   }
 ];
 
@@ -38,11 +44,11 @@ export function Blog() {
         <div className="pt-20 mb-16">
           <AnimatedText 
             el="h1" 
-            text="Writings" 
+            text="Blog" 
             className="text-[60px] md:text-[100px] leading-[0.85] font-black tracking-tighter mb-8 italic uppercase" 
           />
           <FadeIn delay={0.2}>
-            <p className="text-[var(--gray-medium)] text-sm font-light mb-12 max-w-xl leading-relaxed">Thoughts, tutorials, and insights on design, engineering, and digital brutalism.</p>
+            <p className="text-[var(--gray-medium)] text-sm font-light mb-12 max-w-xl leading-relaxed">Thoughts, tutorials, and insights of everythings.</p>
             <div className="flex flex-col gap-2 mb-8">
               <label className="text-[10px] uppercase tracking-[0.2em] font-mono text-[var(--gray-medium)]">Search Archive</label>
               <input 
