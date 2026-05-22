@@ -17,13 +17,11 @@ export function Navbar() {
     { name: "About", path: "/#about" },
     { name: "Projects", path: "/projects" },
     { name: "Blog", path: "/blog" },
-    { name: "Contact", path: "/#contact" },
   ];
 
   return (
     <header className="fixed top-0 left-0 w-full h-[var(--nav-height,80px)] bg-transparent backdrop-blur-md z-[1000] flex items-center border-b border-[var(--border-color)] transition-colors duration-300">
       <div className="container mx-auto px-6 h-full flex justify-between items-center max-w-[1000px]">
-        {/* Logo */}
         <div className="flex items-center gap-4 z-[1001]">
           <Link to="/" className="w-8 h-8 bg-[var(--text-color)] flex items-center justify-center rounded-sm hover:-translate-y-0.5 transition-transform">
             <span className="text-[var(--bg-color)] font-black text-xs italic">AR</span>
@@ -31,7 +29,6 @@ export function Navbar() {
           <span className="text-[11px] uppercase tracking-[0.3em] font-medium opacity-60 hidden sm:block">Agung Rahma</span>
         </div>
 
-        {/* Desktop Nav */}
         <nav className="hidden md:flex gap-8 lg:gap-10 items-center">
           {navLinks.map((link) => (
             <Link
@@ -57,7 +54,6 @@ export function Navbar() {
           </a>
         </nav>
 
-        {/* Mobile controls */}
         <div className="flex md:hidden items-center gap-4 z-[1001]">
           <button
             onClick={toggleTheme}
@@ -75,7 +71,6 @@ export function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Nav Overlay */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
