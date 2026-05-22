@@ -5,14 +5,13 @@ import { AnimatedText, FadeIn } from "../components/AnimatedText";
 export function Home() {
   return (
     <div className="w-full">
-      {/* Hero Section */}
       <section className="min-h-[90vh] flex flex-col justify-center pt-[var(--nav-height,80px)] xl:min-h-screen xl:pt-0">
         <div className="container mx-auto px-6 max-w-[1000px]">
           <div className="flex flex-col justify-center max-w-[800px]">
             <FadeIn delay={0.1}>
               <div className="mb-6 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                <span className="text-[10px] uppercase tracking-[0.2em] font-mono text-green-600 dark:text-green-500/80">Available for collaboration &bull; {new Date().getFullYear()}</span>
+                <span className="text-[10px] uppercase tracking-[0.2em] font-mono text-green-600 dark:text-green-500/80">WebDev, Lead Project, Maimai &bull; {new Date().getFullYear()}</span>
               </div>
             </FadeIn>
             
@@ -40,12 +39,12 @@ export function Home() {
                 <div className="w-[1px] h-8 bg-[var(--border-color)]"></div>
                 <div className="flex flex-col">
                   <span className="text-[10px] uppercase opacity-40 mb-1 font-mono">Experience</span>
-                  <span className="text-xs font-medium">05+ Years</span>
+                  <span className="text-xs font-medium">Fundamental</span>
                 </div>
                 <div className="w-[1px] h-8 bg-[var(--border-color)]"></div>
                 <div className="flex flex-col">
                   <span className="text-[10px] uppercase opacity-40 mb-1 font-mono">Timezone</span>
-                  <span className="text-xs font-medium">GMT +7</span>
+                  <span className="text-xs font-medium">GMT +8</span>
                 </div>
               </div>
             </FadeIn>
@@ -53,7 +52,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about" className="py-24 md:py-32">
         <div className="container mx-auto px-6 max-w-[1000px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -66,7 +64,7 @@ export function Home() {
               <FadeIn delay={0.2}>
                 <div className="space-y-6 text-base text-[var(--gray-medium)] font-light max-w-[600px] leading-relaxed">
                   <p>
-                    Hello! I'm Agung, a passionate developer based in Indonesia with a keen eye for design.
+                    I'm Agung, a developer based in Bali. I'm currently focus develop my agency and learning Machine Learning.
                   </p>
                   <p>
                     I enjoy bridging the gap between engineering and design — combining my technical knowledge with my eye for aesthetics to create beautiful, scalable, and responsive products.
@@ -100,7 +98,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* Featured Projects Preview */}
       <section className="py-24 md:py-32 border-t border-[var(--border-color)]">
         <div className="container mx-auto px-6 max-w-[1000px]">
           <div className="flex justify-between items-end mb-12">
