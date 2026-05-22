@@ -7,7 +7,7 @@ export function Footer() {
         <span>GitHub</span>
       </div>
       <div className="hidden md:block">
-        <span>&copy; {new Date().getFullYear()} AGUNG RAHMA &mdash; JAKARTA, ID</span>
+        <span>&copy; {new Date().getFullYear()} AGUNG RAHMA &mdash; DENPASAR, ID</span>
       </div>
     </footer>
   );
