@@ -26,7 +26,7 @@ export function Home() {
 
             <FadeIn delay={0.3}>
               <p className="max-w-md text-[var(--gray-medium)] text-sm leading-relaxed mb-8 font-light">
-                Crafting high-performance digital experiences through a lens of brutalist elegance and technical precision. Specializing in WebGL, Motion Design, and Creative Engineering.
+                Crafting high-performance digital experiences through a lens and technical precision. Specializing in Machine Learning and Creative Engineering.
               </p>
             </FadeIn>
 
@@ -34,7 +34,7 @@ export function Home() {
               <div className="flex gap-4">
                 <div className="flex flex-col">
                   <span className="text-[10px] uppercase opacity-40 mb-1 font-mono">Specialization</span>
-                  <span className="text-xs font-medium">Creative Front-end</span>
+                  <span className="text-xs font-medium">Machine Learning</span>
                 </div>
                 <div className="w-[1px] h-8 bg-[var(--border-color)]"></div>
                 <div className="flex flex-col">
@@ -64,20 +64,17 @@ export function Home() {
               <FadeIn delay={0.2}>
                 <div className="space-y-6 text-base text-[var(--gray-medium)] font-light max-w-[600px] leading-relaxed">
                   <p>
-                    I'm Agung, a developer based in Bali. I'm currently focus develop my agency and learning Machine Learning.
+                    I'm Agung, a developer based in Bali. I'm currently focus develop startup and research about Machine Learning.
                   </p>
                   <p>
-                    I enjoy bridging the gap between engineering and design — combining my technical knowledge with my eye for aesthetics to create beautiful, scalable, and responsive products.
+                    I enjoy to discuss about any technologies stuff or even rhythm game! 
                   </p>
                 </div>
                 <div className="flex gap-6 mt-8">
-                  <a href="#" className="flex items-center gap-2 text-[10px] uppercase tracking-widest hover:text-[var(--text-color)] transition-all opacity-60 hover:opacity-100">
+                  <a href="https://x.com/gungrahmaa" className="flex items-center gap-2 text-[10px] uppercase tracking-widest hover:text-[var(--text-color)] transition-all opacity-60 hover:opacity-100">
                     <Twitter size={14} /> <span>Twitter</span>
                   </a>
-                  <a href="#" className="flex items-center gap-2 text-[10px] uppercase tracking-widest hover:text-[var(--text-color)] transition-all opacity-60 hover:opacity-100">
-                    <Linkedin size={14} /> <span>LinkedIn</span>
-                  </a>
-                  <a href="#" className="flex items-center gap-2 text-[10px] uppercase tracking-widest hover:text-[var(--text-color)] transition-all opacity-60 hover:opacity-100">
+                  <a href="https://github.com/gungrahma" className="flex items-center gap-2 text-[10px] uppercase tracking-widest hover:text-[var(--text-color)] transition-all opacity-60 hover:opacity-100">
                     <Github size={14} /> <span>GitHub</span>
                   </a>
                 </div>
@@ -85,7 +82,6 @@ export function Home() {
             </div>
             <FadeIn delay={0.4}>
               <div className="w-full aspect-square bg-[var(--gray-light)] rounded-2xl overflow-hidden relative group">
-                {/* Placeholder for the about image */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-[var(--gray-medium)] to-transparent opacity-20"></div>
                 <img 
                   src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=1000&auto=format&fit=crop" 
@@ -140,7 +136,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="py-24 md:py-40">
         <div className="container mx-auto px-6 max-w-[1000px]">
           <FadeIn>
