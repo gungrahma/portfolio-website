@@ -47,13 +47,13 @@ export function Home() {
         </div>
       </section>
 
-      <section id="about" className="py-24 md:py-32">
+      <section id="quick-introduction" className="py-24 md:py-32">
         <div className="container mx-auto px-6 max-w-[1000px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
             <div>
               <AnimatedText
                 el="h2"
-                text="Quick Introduction"
+                text="Quick introduction"
                 className="text-4xl md:text-[40px] font-black italic uppercase tracking-tighter mb-8 md:mb-12"
               />
               <FadeIn delay={0.2}>
