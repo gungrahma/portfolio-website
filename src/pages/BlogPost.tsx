@@ -10,6 +10,12 @@ export function BlogPost() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    return () => {
+      document.title = "Agung Rahma | Portfolio";
+    };
+  }, []);
+
+  useEffect(() => {
     if (!id) return;
 
     getPost(id)
