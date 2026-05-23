@@ -40,6 +40,9 @@ export function About() {
                 <p>
                   I enjoy discussing about any technologies stuff or even rhythm games!
                 </p>
+                <p>
+                  Currently, I'm still internship as ML Engineer in Prima Medika Hospital, and right now currently research more about Machine learning.
+                </p>
               </div>
               <div className="flex gap-6 mt-8">
                 <a
