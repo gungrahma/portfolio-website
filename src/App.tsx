@@ -9,6 +9,7 @@ import { Footer } from "./components/Footer";
 import { CustomCursor } from "./components/CustomCursor";
 
 import { Home } from "./pages/Home";
+import { About } from "./pages/About";
 import { Projects } from "./pages/Projects";
 import { Blog } from "./pages/Blog";
 import { BlogPost } from "./pages/BlogPost";
@@ -76,6 +77,7 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
+        <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
         <Route path="/projects" element={<PageWrapper><Projects /></PageWrapper>} />
         <Route path="/projects/:id" element={<PageWrapper><ProjectDetails /></PageWrapper>} />
         <Route path="/blog" element={<PageWrapper><Blog /></PageWrapper>} />
