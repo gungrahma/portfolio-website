@@ -53,8 +53,8 @@ export function Home() {
             <div>
               <AnimatedText
                 el="h2"
-                text="About"
-                className="text-4xl md:text-[60px] font-black italic uppercase tracking-tighter mb-8 md:mb-12"
+                text="Quick Introduction"
+                className="text-4xl md:text-[40px] font-black italic uppercase tracking-tighter mb-8 md:mb-12"
               />
               <FadeIn delay={0.2}>
                 <div className="space-y-6 text-base text-[var(--gray-medium)] font-light max-w-[600px] leading-relaxed">
