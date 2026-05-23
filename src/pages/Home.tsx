@@ -61,9 +61,6 @@ export function Home() {
                   <p>
                     I'm Agung, a developer based in Bali. I'm currently focus develop startup and research about Machine Learning.
                   </p>
-                  <p>
-                    I enjoy to discuss about any technologies stuff or even rhythm game! 
-                  </p>
                 </div>
                 <div className="flex gap-6 mt-8">
                   <a href="https://x.com/gungrahmaa" className="flex items-center gap-2 text-[10px] uppercase tracking-widest hover:text-[var(--text-color)] transition-all opacity-60 hover:opacity-100">
