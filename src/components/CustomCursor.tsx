@@ -36,7 +36,6 @@ export function CustomCursor() {
 
   return (
     <>
-      {/* Main Small Cursor dot */}
       <motion.div
         className="fixed top-0 left-0 w-3 h-3 bg-[var(--text-color)] rounded-full pointer-events-none z-[9999] mix-blend-difference"
         animate={{
@@ -46,7 +45,7 @@ export function CustomCursor() {
         }}
         transition={{ type: "tween", ease: "backOut", duration: 0.15 }}
       />
-      {/* Outer trailing circle */}
+      
       <motion.div
         className="fixed top-0 left-0 w-10 h-10 border border-[var(--text-color)] rounded-full pointer-events-none z-[9998] mix-blend-difference"
         animate={{

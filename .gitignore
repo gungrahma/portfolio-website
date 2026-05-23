@@ -4,5 +4,4 @@ dist/
 .env
 .claude
 .firebase
-.github
 .firebaserc

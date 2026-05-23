@@ -16,12 +16,7 @@ export function Home() {
             </FadeIn>
             
             <h1 className="text-[80px] md:text-[120px] leading-[0.85] font-black tracking-tighter mb-4 italic uppercase relative z-10 w-full">
-              <AnimatedText el="span" text="Agung" className="block" />
-              <FadeIn delay={0.2} className="block mt-[10px] md:mt-2">
-                <span className="text-transparent text-stroke inline-block">
-                  Rahma
-                </span>
-              </FadeIn>
+              <AnimatedText el="span" text="Agung Rahma" className="block" />
             </h1>
 
             <FadeIn delay={0.3}>
