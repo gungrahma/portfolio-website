@@ -13,7 +13,12 @@ export function BlogPost() {
     if (!id) return;
 
     getPost(id)
-      .then(setPost)
+      .then((p) => {
+        setPost(p);
+        if (p?.title) {
+          document.title = `${p.title} | Blog`;
+        }
+      })
       .catch(console.error)
       .finally(() => setLoading(false));
   }, [id]);
