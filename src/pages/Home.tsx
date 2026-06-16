@@ -21,7 +21,7 @@ export function Home() {
 
             <FadeIn delay={0.3}>
               <p className="max-w-md text-[var(--gray-medium)] text-sm leading-relaxed mb-8 font-light">
-                Crafting high-performance digital experiences through a lens and technical precision. Specializing in Machine Learning and Creative Engineering.
+                Full-stack web developer passionate about building interactive digital experiences. I combine web technologies with machine learning experimentation, particularly in medical informatics. I also explore visual storytelling through photography.
               </p>
             </FadeIn>
 
@@ -59,7 +59,7 @@ export function Home() {
               <FadeIn delay={0.2}>
                 <div className="space-y-6 text-base text-[var(--gray-medium)] font-light max-w-[600px] leading-relaxed">
                   <p>
-                    I'm Agung, a developer based in Bali. I'm currently focus develop startup and research about Machine Learning.
+                    I'm Agung, a developer from Bali who bridges web development with machine learning. My internship in medical informatics sparked a passion for applying AI to real-world healthcare challenges. When I'm not building digital experiences, I'm exploring composition through photography.
                   </p>
                 </div>
                 <div className="flex gap-6 mt-8">
