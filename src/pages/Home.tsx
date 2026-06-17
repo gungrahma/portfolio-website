@@ -11,7 +11,7 @@ export function Home() {
             <FadeIn delay={0.1}>
               <div className="mb-6 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                <span className="text-[10px] uppercase tracking-[0.2em] font-mono text-green-600 dark:text-green-500/80">WebDev, Lead Project, Maimai &bull; {new Date().getFullYear()}</span>
+                <span className="text-[10px] uppercase tracking-[0.2em] font-mono text-green-600 dark:text-green-500/80">WebDev, Machine Learning &bull; {new Date().getFullYear()}</span>
               </div>
             </FadeIn>
             
@@ -29,12 +29,7 @@ export function Home() {
               <div className="flex gap-4">
                 <div className="flex flex-col">
                   <span className="text-[10px] uppercase opacity-40 mb-1 font-mono">Specialization</span>
-                  <span className="text-xs font-medium">Machine Learning</span>
-                </div>
-                <div className="w-[1px] h-8 bg-[var(--border-color)]"></div>
-                <div className="flex flex-col">
-                  <span className="text-[10px] uppercase opacity-40 mb-1 font-mono">Experience</span>
-                  <span className="text-xs font-medium">Fundamental</span>
+                  <span className="text-xs font-medium">Web Developer and Machine Learning</span>
                 </div>
                 <div className="w-[1px] h-8 bg-[var(--border-color)]"></div>
                 <div className="flex flex-col">
@@ -133,10 +128,10 @@ export function Home() {
           <FadeIn>
             <h2 className="text-[10px] uppercase tracking-[0.3em] font-mono opacity-60 mb-8">Let's work together</h2>
             <a 
-              href="mailto:hello@agungrahma.com" 
+              href="mailto:agungrahmasuputraa@gmail.com" 
               className="block text-[32px] md:text-[60px] lg:text-[80px] font-black italic uppercase tracking-tighter hover:opacity-70 transition-opacity break-all leading-[0.9] text-transparent text-stroke stroke-[var(--text-color)]"
             >
-              hello@agungrahma.com
+              agungrahmasuputraa@gmail.com
             </a>
           </FadeIn>
           
@@ -156,7 +151,7 @@ export function Home() {
                       <textarea className="bg-transparent border-b border-[var(--border-color)] py-3 text-sm focus:outline-none focus:border-[var(--text-color)] transition-colors min-h-[120px] resize-none placeholder:text-[var(--border-color)]" placeholder="Tell me about your vision..."></textarea>
                    </div>
                    <button type="submit" className="px-8 py-4 bg-[var(--text-color)] text-[var(--bg-color)] text-[10px] uppercase tracking-[0.2em] font-bold rounded-full hover:opacity-80 transition-opacity w-full sm:w-auto">
-                     Submit Request
+                     Submit
                    </button>
                 </form>
              </FadeIn>
@@ -166,7 +161,7 @@ export function Home() {
                      I am currently <span className="text-[var(--text-color)] font-medium">available for freelance work</span> and open to discussing full-time opportunities. Let's create something extraordinary together.
                    </p>
                    <p>
-                     Typically responds within 24-48 hours. For immediate inquiries, please reach out via LinkedIn or Twitter.
+                     Typically responds 24/7. For immediate inquiries, please reach out via LinkedIn or Twitter.
                    </p>
                 </div>
              </FadeIn>
