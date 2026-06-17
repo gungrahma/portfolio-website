@@ -36,7 +36,7 @@ export function Projects() {
         <div className="pt-20 mb-16">
           <AnimatedText 
             el="h1" 
-            text="Selected Archive" 
+            text="Selected Project" 
             className="text-[60px] md:text-[100px] leading-[0.85] font-black tracking-tighter mb-8 italic uppercase" 
           />
           
