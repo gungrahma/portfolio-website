@@ -21,7 +21,7 @@ export function Home() {
 
             <FadeIn delay={0.3}>
               <p className="max-w-md text-[var(--gray-medium)] text-sm leading-relaxed mb-8 font-light">
-                Full-stack web developer passionate about building interactive digital experiences. I combine web technologies with machine learning experimentation, particularly in medical informatics. I also explore visual storytelling through photography.
+                Full-stack web developer that's passionate about building interactive digital experiences. I combine web technologies with machine learning experimentation, particularly in medical informatics. I also explore visual storytelling through photography.
               </p>
             </FadeIn>
 
