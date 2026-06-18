@@ -29,7 +29,7 @@ export function Home() {
               <div className="flex gap-4">
                 <div className="flex flex-col">
                   <span className="text-[10px] uppercase opacity-40 mb-1 font-mono">Specialization</span>
-                  <span className="text-xs font-medium">Web Developer, Machine Learning and maimai</span>
+                  <span className="text-xs font-medium">Web Developer and Machine Learning</span>
                 </div>
                 <div className="w-[1px] h-8 bg-[var(--border-color)]"></div>
                 <div className="flex flex-col">
@@ -54,7 +54,9 @@ export function Home() {
               <FadeIn delay={0.2}>
                 <div className="space-y-6 text-base text-[var(--gray-medium)] font-light max-w-[600px] leading-relaxed">
                   <p>
-                    I'm Agung, a developer from Bali who bridges web development with machine learning. My internship in medical informatics sparked a passion for applying AI to real-world healthcare challenges. When I'm not building digital experiences, I'm exploring composition through photography.
+                    I'm Agung, a developer from Bali who is interested in web development with machine learning. 
+                    My internship in medical informatics sparked a passion for applying AI to real-world healthcare challenges. 
+                    When I'm not building digital experiences, I'm exploring composition through photography.
                   </p>
                 </div>
                 <div className="flex gap-6 mt-8">
