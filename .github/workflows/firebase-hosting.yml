@@ -19,6 +19,8 @@ jobs:
       - run: npm ci
 
       - run: npm run build
+        env:
+          VITE_ADMIN_PATH: agungrahma-admin
 
       - name: Deploy to Firebase
         env:
