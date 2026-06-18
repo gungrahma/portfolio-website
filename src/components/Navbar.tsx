@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Moon, Sun, Menu, X, Shield } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
+import { useAuth } from "../context/AuthContext";
+import { adminRoutes } from "../lib/admin-routes";
 
 export function Navbar() {
   const { theme, toggleTheme } = useTheme();
+  const { isAdmin } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
@@ -39,6 +42,16 @@ export function Navbar() {
               {link.name}
             </Link>
           ))}
+          {isAdmin && (
+            <Link
+              to={adminRoutes.dashboard}
+              className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-widest cursor-pointer text-[var(--gray-medium)] hover:text-[var(--text-color)] transition-colors"
+              title="Admin Dashboard"
+            >
+              <Shield size={12} />
+              Admin
+            </Link>
+          )}
           <button
             onClick={toggleTheme}
             className="p-2 hover:rotate-[30deg] transition-transform duration-300"
@@ -89,6 +102,14 @@ export function Navbar() {
                   {link.name}
                 </Link>
               ))}
+              {isAdmin && (
+                <Link
+                  to={adminRoutes.dashboard}
+                  className="text-2xl font-medium hover:opacity-60 transition-opacity inline-flex items-center gap-2"
+                >
+                  <Shield size={18} /> Admin
+                </Link>
+              )}
             </motion.div>
           )}
         </AnimatePresence>
