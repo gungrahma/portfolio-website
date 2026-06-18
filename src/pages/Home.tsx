@@ -29,7 +29,7 @@ export function Home() {
               <div className="flex gap-4">
                 <div className="flex flex-col">
                   <span className="text-[10px] uppercase opacity-40 mb-1 font-mono">Specialization</span>
-                  <span className="text-xs font-medium">Web Developer and Machine Learning</span>
+                  <span className="text-xs font-medium">Web Developer, Machine Learning and maimai</span>
                 </div>
                 <div className="w-[1px] h-8 bg-[var(--border-color)]"></div>
                 <div className="flex flex-col">
