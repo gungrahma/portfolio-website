@@ -1,8 +1,37 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Twitter, Linkedin, Github } from "lucide-react";
 import { AnimatedText, FadeIn } from "../components/AnimatedText";
+import { getProjects, type Project } from "../lib/firestore";
 
 export function Home() {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function fetchProjects() {
+      try {
+        const data = await getProjects();
+        if (!cancelled) {
+          setProjects(data.slice(0, 2));
+          setLoading(false);
+        }
+      } catch (err) {
+        if (!cancelled) {
+          console.error("Failed to load projects:", err);
+          setLoading(false);
+        }
+      }
+    }
+
+    fetchProjects();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
   return (
     <div className="w-full">
       <section className="min-h-[90vh] flex flex-col justify-center pt-[var(--nav-height,80px)] xl:min-h-screen xl:pt-0">
@@ -97,18 +126,30 @@ export function Home() {
           </div>
 
           <div className="flex flex-col gap-10">
-            {[1, 2].map((i) => (
-              <FadeIn key={i} delay={i * 0.1}>
+            {loading && (
+              <div className="text-[10px] uppercase tracking-[0.2em] font-mono text-[var(--gray-medium)] py-8">
+                Loading projects...
+              </div>
+            )}
+
+            {!loading && projects.length === 0 && (
+              <div className="text-[10px] uppercase tracking-[0.2em] font-mono text-[var(--gray-medium)] py-8">
+                No projects yet. Add some via Firebase Console.
+              </div>
+            )}
+
+            {!loading && projects.map((project, i) => (
+              <FadeIn key={project.id} delay={i * 0.1}>
                 <div className="group border-t border-[var(--border-color)] pt-10 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6 md:gap-10 transition-transform duration-300 hover:translate-x-2">
                   <div className="text-[10px] text-[var(--gray-medium)] uppercase tracking-[0.2em] mt-2 font-mono">
-                    {i === 1 ? 'Web Development' : 'UI/UX Design'}
+                    {project.category}
                   </div>
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-bold italic uppercase tracking-tight mb-3">{i === 1 ? 'E-Commerce Platform' : 'Fintech App Redesign'}</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold italic uppercase tracking-tight mb-3">{project.title}</h3>
                     <p className="text-[var(--gray-medium)] text-sm font-light mb-6 leading-relaxed max-w-xl">
-                      A complete redesign and development of a modern digital experience focusing on conversion and ease of use.
+                      {project.description}
                     </p>
-                    <Link to={`/projects/${i}`} className="text-[10px] uppercase tracking-[0.2em] underline underline-offset-4 font-medium opacity-60 hover:opacity-100 transition-colors">
+                    <Link to={`/projects/${project.id}`} className="text-[10px] uppercase tracking-[0.2em] underline underline-offset-4 font-medium opacity-60 hover:opacity-100 transition-colors">
                       View Project
                     </Link>
                   </div>
