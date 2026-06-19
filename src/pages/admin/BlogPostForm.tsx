@@ -162,9 +162,14 @@ export function BlogPostForm() {
         title: form.title,
         date: form.date,
         excerpt: form.excerpt,
-        content: form.content || undefined,
-        sections: sanitizedSections.length > 0 ? sanitizedSections : undefined,
       };
+
+      if (form.content.trim() !== "") {
+        payload.content = form.content;
+      }
+      if (sanitizedSections.length > 0) {
+        payload.sections = sanitizedSections;
+      }
 
       if (isEdit) {
         await updatePost(id!, payload);
