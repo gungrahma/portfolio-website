@@ -119,7 +119,7 @@ export function Projects() {
                   key={project.id}
                   className="group flex flex-col gap-4"
                 >
-                  <div className={`w-full aspect-[4/5] rounded-2xl overflow-hidden bg-[var(--gray-light)] border relative ${project.frequentThisMonth ? 'border-[var(--text-color)]' : 'border-[var(--border-color)]'}`}>
+                  <div className={`w-full aspect-[3/2] rounded-2xl overflow-hidden bg-[var(--gray-light)] border relative ${project.frequentThisMonth ? 'border-[var(--text-color)]' : 'border-[var(--border-color)]'}`}>
                     {project.frequentThisMonth && (
                       <div className="absolute top-4 right-4 z-20">
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[var(--bg-color)] border border-[var(--border-color)] rounded-full">
@@ -128,11 +128,10 @@ export function Projects() {
                         </div>
                       </div>
                     )}
-                    <div className="absolute top-0 left-0 w-full h-full opacity-30 grayscale group-hover:grayscale-0 transition-all duration-700 bg-gradient-to-t from-[var(--bg-color)] via-transparent to-transparent z-10" style={{ backgroundImage: 'radial-gradient(circle at center, var(--text-color) 1px, transparent 1px)', backgroundSize: '15px 15px' }}></div>
                     <img
                       src={project.img}
                       alt={project.title}
-                      className={`absolute top-0 left-0 w-full h-full object-cover mix-blend-overlay transition-transform duration-700 group-hover:scale-105 ${project.frequentThisMonth ? 'opacity-80' : 'opacity-50'}`}
+                      className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
                   <div>

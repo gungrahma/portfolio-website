@@ -88,11 +88,10 @@ export function ProjectDetails() {
             <div className="lg:col-span-8 flex flex-col gap-10">
               <FadeIn delay={0.3}>
                 <div className="w-full aspect-video rounded-2xl overflow-hidden bg-[var(--gray-light)] border border-[var(--border-color)] relative group">
-                  <div className="absolute top-0 left-0 w-full h-full opacity-30 grayscale transition-all duration-700 bg-gradient-to-t from-[var(--bg-color)] via-transparent to-transparent z-10" style={{ backgroundImage: 'radial-gradient(circle at center, var(--text-color) 1px, transparent 1px)', backgroundSize: '15px 15px' }}></div>
                   <img
                     src={project.img}
                     alt={project.title}
-                    className="absolute top-0 left-0 w-full h-full object-cover mix-blend-overlay opacity-50"
+                    className="absolute top-0 left-0 w-full h-full object-cover"
                   />
                 </div>
               </FadeIn>
@@ -101,9 +100,6 @@ export function ProjectDetails() {
                 <div className="text-base md:text-lg font-light text-[var(--gray-medium)] leading-relaxed space-y-6">
                   <h3 className="text-[10px] uppercase tracking-[0.2em] font-mono text-[var(--text-color)] mb-4">Overview</h3>
                   <p>{project.description}</p>
-                  <p>
-                    Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.
-                  </p>
                 </div>
               </FadeIn>
             </div>
