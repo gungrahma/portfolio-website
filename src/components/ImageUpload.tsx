@@ -30,9 +30,14 @@ export function ImageUpload({
   useEffect(() => {
     return () => {
       if (previewUrl) URL.revokeObjectURL(previewUrl);
-      abortControllerRef.current?.abort();
     };
   }, [previewUrl]);
+
+  useEffect(() => {
+    return () => {
+      abortControllerRef.current?.abort();
+    };
+  }, []);
 
   async function handleFile(file: File) {
     setError(null);
