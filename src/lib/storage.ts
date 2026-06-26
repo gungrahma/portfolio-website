@@ -81,7 +81,11 @@ export function uploadImage(file: File, options: UploadOptions): {
       },
       (error) => {
         signal?.removeEventListener("abort", abortHandler);
-        reject(error);
+        const code = (error as { code?: string })?.code ?? "unknown";
+        const enhanced = new Error(formatStorageError(code, error.message));
+        (enhanced as Error & { code?: string }).code = code;
+        console.error("[storage] upload failed:", { code, message: error.message, path: fullPath });
+        reject(enhanced);
       },
       async () => {
         try {
@@ -89,6 +93,7 @@ export function uploadImage(file: File, options: UploadOptions): {
           signal?.removeEventListener("abort", abortHandler);
           resolve({ url, path: fullPath });
         } catch (err) {
+          signal?.removeEventListener("abort", abortHandler);
           reject(err);
         }
       }
@@ -96,6 +101,31 @@ export function uploadImage(file: File, options: UploadOptions): {
   });
 
   return { task, promise };
+}
+
+function formatStorageError(code: string, originalMessage?: string): string {
+  switch (code) {
+    case "storage/unauthorized":
+    case "storage/permission-denied":
+      return "Permission denied. Make sure Storage is enabled in Firebase Console and security rules allow authenticated writes.";
+    case "storage/canceled":
+      return "Upload canceled.";
+    case "storage/quota-exceeded":
+      return "Storage quota exceeded.";
+    case "storage/retry-limit-exceeded":
+      return "Upload failed after multiple retries. Check your network connection.";
+    case "storage/invalid-format":
+    case "storage/invalid-content-type":
+      return "Invalid file format.";
+    case "storage/object-not-found":
+      return "File not found in storage.";
+    case "storage/bucket-not-found":
+      return "Storage bucket not found. Enable Firebase Storage in the Firebase Console.";
+    case "storage/project-not-found":
+      return "Firebase project not found. Check your .env configuration.";
+    default:
+      return originalMessage || `Upload failed (${code})`;
+  }
 }
 
 export async function deleteImageByUrl(url: string): Promise<void> {

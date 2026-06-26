@@ -68,6 +68,7 @@ export function ImageUpload({
     } catch (err) {
       setUploading(false);
       setPreviewUrl(null);
+      console.error("[ImageUpload] Upload error:", err);
       if (err instanceof Error) {
         if (err.message === "Upload aborted") {
           return;
@@ -118,9 +119,14 @@ export function ImageUpload({
   }
 
   function handleClick() {
-    if (!disabled && !uploading) {
-      fileInputRef.current?.click();
+    if (disabled || uploading) return;
+    const input = fileInputRef.current;
+    if (!input) {
+      console.warn("[ImageUpload] file input ref is null");
+      setError("File input not ready. Please refresh and try again.");
+      return;
     }
+    input.click();
   }
 
   function handleRemove() {
@@ -213,16 +219,19 @@ export function ImageUpload({
               : "border-[var(--border-color)] hover:border-[var(--text-color)] bg-[var(--gray-light)]/30"
           } ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
         >
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept="image/jpeg,image/png,image/webp,image/gif,image/avif"
-            onChange={handleInputChange}
-            disabled={disabled || uploading}
-            className="hidden"
-            required={required}
-          />
-          <div className="flex flex-col items-center gap-2 text-center px-4">
+          <label className="absolute inset-0 cursor-pointer">
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/jpeg,image/png,image/webp,image/gif,image/avif"
+              onChange={handleInputChange}
+              onClick={(e) => e.stopPropagation()}
+              disabled={disabled || uploading}
+              className="sr-only"
+              required={required}
+            />
+          </label>
+          <div className="relative z-10 flex flex-col items-center gap-2 text-center px-4 pointer-events-none">
             {isDragging ? (
               <>
                 <Upload className="w-8 h-8 text-[var(--text-color)]" />
